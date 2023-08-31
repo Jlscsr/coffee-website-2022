@@ -1,0 +1,26 @@
+@use "../util/variables";
+@use "../util/flex-styles";
+
+$screen-size: (
+  "small": 280px,
+  "medium": 768px,
+  "large": 992px,
+);
+
+@mixin small {
+  @media (max-width: map-get($screen-size, small)) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: map-get($screen-size, medium)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: map-get($screen-size, large)) {
+    @content;
+  }
+}

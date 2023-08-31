@@ -1,0 +1,17 @@
+// SPACE BETWEEN
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @mixin displayCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexDiretionColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  

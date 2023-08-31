@@ -1,0 +1,42 @@
+@use "../util/variables";
+@use "../util/flex-styles";
+
+.main {
+  &__aboutPage {
+    @include flex-styles.displayCenter;
+    flex-direction: column-reverse;
+    padding: 2em;
+    gap: 1.5em;
+    background-color: variables.$background-color;
+
+    &__img > img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    &__description {
+      color: variables.$text-color;
+      &__title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: map-get(variables.$font-weights, light);
+        margin-bottom: 0.6em;
+        letter-spacing: 5px;
+
+        &__highlight-color {
+          font-size: 6rem;
+          color: variables.$accent2-color;
+        }
+      }
+
+      &__paragraph {
+        font-size: 1.4rem;
+        font-weight: map-get(variables.$font-weights, light);
+        line-height: 1.5;
+      }
+
+      &__paragraph2 {
+        margin-top: 1em;
+      }
+    }
+  }
+}

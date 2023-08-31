@@ -1,0 +1,267 @@
+@use "../util/variables";
+@use "../util/flex-styles";
+@use "../util/breakpoints";
+
+//SMALL DEVICES
+// HEADER QUERIE
+.header {
+  @include breakpoints.small {
+    & {
+      padding-inline: 1em;
+      &__logo {
+        text-align: start;
+
+        &__link {
+          &__jr {
+            font-size: 1.9rem;
+          }
+
+          &__shop-title {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      &__menubar {
+        width: 35px;
+        height: 30px;
+      }
+
+      &__nav {
+        &__list {
+          gap: 0.6em;
+          &__items {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+//LANDING QUERIE
+.main {
+  @include breakpoints.small {
+    &__landingPage {
+      &__intro-container {
+        margin-left: 0.2rem;
+        &__title {
+          font-size: 1.5rem;
+          &__highlight-color {
+            font-size: 7rem;
+          }
+        }
+        &__subtitle {
+          font-size: 1.4rem;
+        }
+
+        &__link {
+          font-size: 1.2rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//ABOUT QUERIE
+.main {
+  &__aboutPage {
+    @include breakpoints.small {
+      &__img {
+        text-align: center;
+        & > img {
+          width: 100%;
+        }
+      }
+
+      &__description {
+        &__title {
+          font-size: 2rem;
+
+          &__highlight-color {
+            font-size: 5rem;
+          }
+        }
+
+        &__paragraph {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//SERVICES QUERIE
+.main {
+  @include breakpoints.small {
+    &__servicesPage {
+      &__title {
+        font-size: 2rem;
+        &__highlight-color {
+          font-size: 5rem;
+        }
+      }
+
+      &__cardContainer {
+        &__card {
+          gap: 1em;
+          &__logo {
+            display: none;
+          }
+
+          &__title > h1 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//CONTACT QUERIE
+.main {
+  @include breakpoints.small {
+    &__contactPage {
+      &__container {
+        &__title {
+          font-size: 2rem;
+          &__highlight-color {
+            font-size: 5rem;
+          }
+        }
+
+        &__quote {
+          font-size: 1rem;
+        }
+
+        &__socialIcons {
+          width: 100%;
+        }
+      }
+
+      &__helpContainer {
+        width: 100%;
+
+        & > a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+//MEDIUM DEVICES
+// HEADER QUERIE
+.header {
+  @include breakpoints.medium {
+    &__menubar {
+      display: none;
+    }
+    &__nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      transform: translateX(0%);
+
+      &__list {
+        @include flex-styles.displayCenter;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+//ABOUT QUERIE
+.main {
+  &__aboutPage {
+    @include breakpoints.medium {
+      &__img {
+        text-align: center;
+        & > img {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+//LARGE DEVICES
+
+// HEADER QUERIE
+.header {
+  @include breakpoints.large {
+    & {
+      padding-inline: 6em;
+    }
+  }
+  @include breakpoints.large {
+    &__nav {
+      &__list {
+        @include flex-styles.displayCenter;
+        flex-direction: row;
+        gap: 3em;
+      }
+    }
+  }
+}
+
+//LANDING QUERIE
+.main {
+  &__landingPage {
+    @include breakpoints.large {
+      &__intro-container {
+        margin-left: 15em;
+      }
+    }
+  }
+}
+
+//ABOUT QUERIE
+.main {
+  @include breakpoints.large {
+    &__aboutPage {
+      @include flex-styles.displayCenter;
+      flex-direction: row;
+      &__img {
+        width: 80%;
+        & > img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+//SERVICES QUERIE
+.main {
+  &__servicesPage {
+    @include breakpoints.large {
+      &__cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+//CONTACT QUERIE
+.main {
+  &__contactPage {
+    &__container {
+      @include breakpoints.large {
+        &__socialIcons {
+          @include flex-styles.displayCenter;
+          gap: 2em;
+        }
+      }
+    }
+
+    @include breakpoints.large {
+      &__helpContainer {
+        @include flex-styles.displayCenter;
+        gap: 0.5em;
+      }
+    }
+  }
+}

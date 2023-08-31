@@ -1,0 +1,85 @@
+@use "../util/variables";
+@use "../util/flex-styles";
+
+.main {
+  &__contactPage {
+    background-color: variables.$background-color;
+    padding: 2em;
+    color: variables.$text-color;
+
+    &__container {
+      @include flex-styles.flexDiretionColumn;
+      gap: 1em;
+
+      &__title {
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 5px;
+        font-weight: map-get(variables.$font-weights, light);
+
+        &__highlight-color {
+          color: variables.$accent2-color;
+          font-size: 6rem;
+        }
+      }
+
+      &__quote {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: map-get(variables.$font-weights, light);
+        color: variables.$accent-color;
+      }
+
+      &__divider1 {
+        width: 90%;
+        height: 2px;
+        margin: 0.5em auto;
+        background-color: variables.$accent2-color;
+      }
+
+      &__socialIcons {
+        @include flex-styles.space-between;
+        width: 70%;
+        margin: 1em auto;
+
+        &__socialMedia {
+          width: clamp(30px, 5vw, 35px);
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &__helpContainer {
+      @include flex-styles.space-between;
+      width: 70%;
+      margin: 1em auto;
+
+      & > a {
+        font-size: 0.9rem;
+        color: variables.$accent-color;
+      }
+    }
+    &__divider2 {
+      width: 90%;
+      height: 2px;
+      margin: 0.5em auto;
+      background-color: variables.$accent2-color;
+    }
+
+    &__copyright {
+      width: 90%;
+      margin: 2em auto 0.5em auto;
+
+      & > h5 {
+        text-align: center;
+        letter-spacing: 2px;
+        color: variables.$accent-color;
+        font-weight: map-get(variables.$font-weights, light);
+      }
+    }
+  }
+}

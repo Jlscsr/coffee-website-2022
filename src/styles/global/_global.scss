@@ -1,0 +1,42 @@
+@use "../util/variables";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: variables.$background-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$accent2-color;
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: variables.$font-family-global;
+  background-color: variables.$background-color;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
