@@ -12,11 +12,7 @@ This project focuses on creating a coffee-themed website to practice and showcas
 
 - **Services:** A section that outlines the services offered, adding depth to the user's understanding of the coffee experience.
 
-- **Products:** A showcase of the various coffee products available, enhancing user engagement.
-
-- **Contact Page:** A means for users to reach out, fostering interaction and feedback.
-
-- **Footer:** A well-designed footer that complements the overall aesthetic and provides essential links and information.
+- **Contact Page(Footer):** A means for users to reach out, fostering interaction and feedback.
 
 Through this project, I aim to strengthen my front-end skills while creating an enjoyable and informative experience for visitors. This README aims to provide a clear overview of the project's scope and components.
 
